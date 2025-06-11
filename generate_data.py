@@ -19,12 +19,14 @@ for _ in range(1000):
     tier = random.choice(["Tier 1", "Tier 2", "Tier 3"])
     resume = random.randint(40, 100)
     
-    if cgpa >= 8.2 and ml and cp and resume > 80:
+    if cgpa >= 8.2 and ml == 1 and cp == 1 and resume > 80:
         label = "Product"
-    elif 6.5 <= cgpa <= 8.0 and (internships >= 1 or certs >= 2) and resume > 60:
+    elif 6.5 <= cgpa < 8.2 and (internships >= 1 or certs >= 2) and resume > 60:
         label = "Service"
     else:
         label = "None"
+
+
 
 
 
