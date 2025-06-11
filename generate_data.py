@@ -18,13 +18,15 @@ for _ in range(1000):
     certs = random.randint(0, 5)
     tier = random.choice(["Tier 1", "Tier 2", "Tier 3"])
     resume = random.randint(40, 100)
-
-    if cgpa >= 8 and ml and cp and resume > 75:
+    
+    if cgpa >= 8.2 and ml and cp and resume > 80:
         label = "Product"
-    elif cgpa >= 6.5 and (internships > 0 or certs > 1):
+    elif 6.5 <= cgpa <= 8.0 and (internships >= 1 or certs >= 2) and resume > 60:
         label = "Service"
     else:
         label = "None"
+
+
 
     data.append([cgpa, internships, projects, comm_skills, cp, dsa, ml, cloud,
                  backlogs, certs, tier, resume, label])
